@@ -9,8 +9,14 @@ install.packages("broom")
 library(broom)
 predictions <- augment(tennis_lm, interval = "prediction")
 
-# Function
-tennis_predict <- function(player1_aces, player2_aces) {
+# Function DRAFT
+tennis_predict <- function(player1_aces, player2_aces){
   difference_aces <- player1_aces - player2_aces
-  if ()
+  if (difference_aces > 0){
+    return ("Player 1 wins")
+  } else if (difference_aces < 0){
+    return ("Player 2 wins")
+  } else {
+    return ("We can't predict who wins")
+  }
 }
