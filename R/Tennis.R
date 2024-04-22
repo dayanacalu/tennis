@@ -5,5 +5,7 @@ summary(tennis_lm)
 
 
 #Prediction:
+install.packages("broom")
+library(broom)
+predictions <- augment(tennis_lm, interval = "prediction")
 
-augment(tennis_lm, interval = "prediction")
