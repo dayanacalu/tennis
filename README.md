@@ -23,7 +23,7 @@ devtools::install_github("dayanacalu/tennis")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-#library(tennis)
+library(tennis)
 ## basic example code
 ```
 
