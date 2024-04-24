@@ -1,6 +1,4 @@
 #' @title Predict the winner of a tennis match based on the number of aces each player serves.
-
-<<<<<<< HEAD
 #' @description This function compares the number of aces served by two players and predicts the winner
 #'based on the difference in aces. If the difference is positive, it predicts that Player 1 wins.
 #'If the difference is negative, it predicts that Player 2 wins. If the difference is zero, it
@@ -14,7 +12,7 @@
 #' tennis_predict(5, 7)
 #
 #' @export
-=======
+
 # Fitting model:
 tennis_lm <- lm(`Difference in Ace` ~ `Player 1 Wins`, data = tennis)
 summary(tennis_lm)
@@ -30,7 +28,7 @@ predictions <- augment(tennis_lm, interval = "prediction")
 
 #' @title Predcit match outcomes using aces
 #' @description Given the aces of two player the function finds the differences in aces and uses the difference to compute the
->>>>>>> 3b37bc61fdbd07010e47bcaeb199edc6920944de
+
 tennis_predict <- function(player1_aces, player2_aces){
   difference_aces <- player1_aces - player2_aces
   if (difference_aces > 0){
@@ -41,7 +39,6 @@ tennis_predict <- function(player1_aces, player2_aces){
     return ("We can't predict who wins")
   }
 }
-<<<<<<< HEAD
 
 # Fitting model:
 #tennis_lm <- lm(`Difference in Ace` ~ `Player 1 Wins`, data = tennis)
@@ -51,6 +48,3 @@ tennis_predict <- function(player1_aces, player2_aces){
 #install.packages("broom")
 #library(broom)
 #predictions <- augment(tennis_lm, interval = "prediction")
-
-=======
->>>>>>> 3b37bc61fdbd07010e47bcaeb199edc6920944de
