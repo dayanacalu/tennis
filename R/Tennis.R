@@ -1,9 +1,9 @@
-#Predict the winner of a tennis match based on the number of aces each player serves.
+#' @title Predict the winner of a tennis match based on the number of aces each player serves.
 
-#This function compares the number of aces served by two players and predicts the winner
-#based on the difference in aces. If the difference is positive, it predicts that Player 1 wins.
-#If the difference is negative, it predicts that Player 2 wins. If the difference is zero, it
-#cannot predict the winner.
+#' @description This function compares the number of aces served by two players and predicts the winner
+#'based on the difference in aces. If the difference is positive, it predicts that Player 1 wins.
+#'If the difference is negative, it predicts that Player 2 wins. If the difference is zero, it
+#'cannot predict the winner.
 #
 #' @param player1_aces Number of aces served by Player 1.
 #' @param player2_aces Number of aces served by Player 2.
