@@ -8,3 +8,5 @@ tennis <-tennis[, -4]
 ## code to prepare `DATASET` dataset goes here
 usethis::use_data(tennis, overwrite = TRUE)
 
+# Adding model to data raw
+usethis::use_data(tennis_lm, internal = TRUE)
