@@ -9,4 +9,6 @@ tennis <-tennis[, -4]
 usethis::use_data(tennis, overwrite = TRUE)
 
 # Adding Model to data raw
+tennis_lm <- lm(`Difference in Ace` ~ `Player 1 Wins`, data = tennis)
+summary(tennis_lm)
 usethis::use_data(tennis_lm, internal = TRUE)
