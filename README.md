@@ -29,3 +29,9 @@ tennis_predict(player1_aces = 10, player2_aces = 8)
 ```
 
     ## [1] "Player 1 wins"
+
+The player who wins is Player 1. Our function did its job correctly by
+comparing how many aces each player served and predicting the winner
+based on that. If the difference is positive, it predicts that Player 1
+wins. If the difference is negative, it predicts that Player 2 wins. If
+the difference is zero, it cannot predict the winner.
