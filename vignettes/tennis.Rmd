@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ## Determining tennis match outcomes 
-The main function of the "Tennis" package is to determine the outcome of a singles tennis match between two players given a hypothetical number of aces each player served in a match. First, load the package.
+What is an ace? It refers to when a player serves the ball and the receiving opponent does not make contact with the ball and is unable to return it. The main function of the "Tennis" package is to determine the outcome of a singles tennis match between two players given a hypothetical number of aces each player served in a match. First, load the package.
 
 ```{r setup}
 library(tennis)
@@ -36,3 +36,11 @@ There is also a built in data set that describes the match outcomes of 14 tennis
 tennis::tennis
 ```
 
+Now, let's see how well our model works by comparing it to real outcomes from our dataset. In a 2019 match, Player 1 (Nadal) played Player 2 (Medvedev). 
+
+```{r}
+tennis_predict(5, 14)
+```
+
+Our model says predicts that Medvedev will win this match. However, Nadal actually won this match. So our model is not 100% reliable.
+ 
