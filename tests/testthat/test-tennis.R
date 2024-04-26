@@ -1,6 +1,6 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+# Testing that both arguments are numeric
+test_that("args are numeric", {
+  # arguments should be numeric
+  expect_true(tennis_predict(is.numeric(player1_aces), is.numeric(player2_aces)))
 })
-test_that("arguments are numeric", {
-  expect_equal()
-})
+
