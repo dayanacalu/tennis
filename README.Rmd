@@ -27,3 +27,14 @@ tennis_predict(player1_aces = 10, player2_aces = 8)
 ```
 
 The player who wins is Player 1. Our function did its job correctly by comparing how many aces each player served and predicting the winner based on that. If the difference is positive, it predicts that Player 1 wins. If the difference is negative, it predicts that Player 2 wins. If the difference is zero, it cannot predict the winner.
+
+You can also use another function for predicting the outcome based on a probabilistic approach:
+
+```{r example}
+library(tennis)
+
+# Predict the outcome using a probabilistic approach
+tennis_predict2(p1_aces = 10, p2_aces = 8)
+```
+
+These probabilities indicate the likelihood of each player winning based on the number of aces they served.
