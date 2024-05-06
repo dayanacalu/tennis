@@ -29,6 +29,15 @@ tennis_predict(player1_aces = 12, player2_aces = 34)
 
 This returns a string that will tell you the predicted outcome of the match. 
 
+## Predicting Tennis Match Outcomes Via Probability
+The second model, `tennis_predict2`, is more fine-tuned and will provide the user with the probabilty of success for each player. It takes the same parameters as the `tennis_predict` function.
+
+```{r}
+tennis_predict2(12, 34)
+```
+
+This model has used the log odds to determine that player 1 has about a 57% probability of winning the match, and player 2 has about a 43% chance of winning based on their aces.
+
 ## Tennis Data
 There is also a built in data set that describes the match outcomes of 14 tennis matches from 2010-2023. 
 
@@ -36,11 +45,18 @@ There is also a built in data set that describes the match outcomes of 14 tennis
 tennis::tennis
 ```
 
-Now, let's see how well our model works by comparing it to real outcomes from our dataset. In a 2019 match, Player 1 (Nadal) played Player 2 (Medvedev). 
+Now, let's see how well our model works by comparing it to real outcomes from our dataset. In a 2019 match, Player 1 (Nadal) played Player 2 (Medvedev). Nadal scored 5 aces while Medvedev scored 14, let's see what our model has to say.
 
 ```{r}
 tennis_predict(5, 14)
 ```
 
-Our model says predicts that Medvedev will win this match. However, Nadal actually won this match. So our model is not 100% reliable.
- 
+Our model says predicts that Medvedev will win this match. However, Nadal actually won this match. So this model is not 100% reliable.
+
+The second predictive model says: 
+
+```{r}
+tennis_predict2(5, 14)
+```
+
+Nadal has a 53% chance of winning, and Medvedev has a 47% chance of winning. This is more accurate than the last model as it predicted correctly.
