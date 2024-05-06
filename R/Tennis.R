@@ -24,13 +24,28 @@ tennis_predict <- function(player1_aces, player2_aces){
   }
 }
 
+#' @title Predict the winner of a tennis match based on the number of aces each player serves using a probabilistic approach.
+#' @description This function predicts the winner of a tennis match based on the number of aces served by each player using a probabilistic approach.
+#' It calculates the difference in aces served and then computes the predicted probabilities of each player winning.
+#' The predicted probabilities are displayed for each player.
+#'
+#' @param p1_aces Number of aces served by Player 1.
+#' @param p2_aces Number of aces served by Player 2.
+#' @return None. Predicted probabilities for each player are printed.
+#' @examples
+#' tennis_predict2(10, 8)
+#' tennis_predict2(5, 7)
+#'
+#' @export
+#'
 tennis_predict2 <- function(p1_aces, p2_aces){
   diff_aces <- p1_aces - p2_aces
-  log_odds <- diff_aces*-0.01290
-  pred_prob_p1 <- plogis(log_odds)*100
-  pred_prob_p2 <- 100-pred_prob_p1
+  log_odds <- diff_aces * -0.01290
+  pred_prob_p1 <- plogis(log_odds) * 100
+  pred_prob_p2 <- 100 - pred_prob_p1
   cat("Predicted Probability Player 1 Winning is:", pred_prob_p1, "\n")
-  cat("Predicted Probability Player 2 Winning is:", pred_prob_p2)}
+  cat("Predicted Probability Player 2 Winning is:", pred_prob_p2, "\n")
+}
 
 #Prediction:
 # install.packages("broom")
