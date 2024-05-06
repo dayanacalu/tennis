@@ -1,6 +1,5 @@
 library(readr)
 us_open_finals_ <- read_csv("Data-Raw/US Open Finals .csv")
-View(US_Open_Finals_)
 
 # Cleaning
 tennis <- US_Open_Finals_[c(1:14), c(1:8)]
