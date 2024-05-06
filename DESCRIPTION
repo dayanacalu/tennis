@@ -5,8 +5,7 @@ Authors@R:
     person("Quinn", "Chamblin", "qchamblin@smith.edu", role = c("aut", "cre"))
     person("Yelena", "Davidson", "ydavidson@smith.edu", role = c("aut", "cre"))
     person("Dayana", "Caluna", "dcaluna@smith.edu", role = c("aut", "cre"))
-Description: An R package that gives the probability of Player 1 or Player 2 winning a tennis match based on the amount of aces each player scores. 
-Log odds are first calculated with a general linear model based on the difference in each player's aces, then converted to probability and returned to the user.   
+Description: An R package that gives the probability of Player 1 or Player 2 winning a tennis match based on the amount of aces each player scores. Log odds are first calculated with a general linear model based on the difference in each player's aces, then converted to probability and returned to the user.   
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
