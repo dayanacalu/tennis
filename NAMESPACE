@@ -2,3 +2,4 @@
 
 export(tennis_predict)
 export(tennis_predict2)
+importFrom("stats", "plogis")
