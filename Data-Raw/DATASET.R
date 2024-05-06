@@ -12,3 +12,10 @@ usethis::use_data(tennis, overwrite = TRUE)
 tennis_lm <- lm(`Difference in Ace` ~ `Player 1 Wins`, data = tennis)
 summary(tennis_lm)
 usethis::use_data(tennis_lm, internal = TRUE)
+
+
+# Rewriting player 1 wins as binary indicator
+tennis$`Player 1 Wins` <- ifelse(tennis$`Player 1 Wins` == "Yes", 1,0)
+# ReEstimating the model
+tennis_glm <- glm(`Player 1 Wins` ~ `Difference in Ace`, data = tennis, family = "binomial")
+summary(tennis_glm)

@@ -24,6 +24,14 @@ tennis_predict <- function(player1_aces, player2_aces){
   }
 }
 
+tennis_predict2 <- function(p1_aces, p2_aces){
+  diff_aces <- p1_aces - p2_aces
+  log_odds <- diff_aces*-0.01290
+  pred_prob_p1 <- plogis(log_odds)*100
+  pred_prob_p2 <- 100-pred_prob_p1
+  cat("Predicted Probability Player 1 Winning is:", pred_prob_p1, "\n")
+  cat("Predicted Probability Player 2 Winning is:", pred_prob_p2)}
+
 #Prediction:
 # install.packages("broom")
 # library(broom)
