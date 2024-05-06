@@ -2,7 +2,8 @@
 % Please edit documentation in R/Tennis.R
 \name{tennis_predict}
 \alias{tennis_predict}
-\title{Predict the winner of a tennis match based on the number of aces each player serves.}
+\title{Predict the winner of a tennis match based on the number of aces each
+player serves.}
 \usage{
 tennis_predict(player1_aces, player2_aces)
 }
@@ -12,13 +13,15 @@ tennis_predict(player1_aces, player2_aces)
 \item{player2_aces}{Number of aces served by Player 2.}
 }
 \value{
-A character string indicating the predicted winner: "Player 1 wins", "Player 2 wins", or "We can't predict who wins".
+A character string indicating the predicted winner: "Player 1 wins",
+"Player 2 wins", or "We can't predict who wins".
 }
 \description{
-This function compares the number of aces served by two players and predicts the winner
-based on the difference in aces. If the difference is positive, it predicts that Player 1 wins.
-If the difference is negative, it predicts that Player 2 wins. If the difference is zero, it
-cannot predict the winner.
+This function compares the number of aces served by two players
+and predicts the winner based on the difference in aces. If the difference
+is positive, it predicts that Player 1 wins. If the difference is negative,
+it predicts that Player 2 wins. If the difference is zero, it cannot predict
+the winner.
 }
 \examples{
 tennis_predict(10, 8)
