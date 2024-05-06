@@ -2,9 +2,11 @@ Package: tennis
 Title: Predicting Tennis Match Outcomes
 Version: 0.0.0.9000
 Authors@R: 
-    person("Quinn", "Chamblin", "qchamblin@smith.edu", role = "aut")
-    person("Yelena", "Davidson", "ydavidson@smith.edu", role = "aut")
-    person("Dayana", "Caluna", "dcaluna@smith.edu", role = c("aut", "cre"))
+    c(person("Dayana", "Caluna", role = c("aut", "cre"),
+                     email = "dcaluna@smith.edu"),
+              person("Quinn", "Chamblin", role = "aut", email = "qchamblin@smith.edu"),
+              person("Yelena", "Davidson", role = "aut",
+                     email = "ydavidson@smith.edu"))
 Description: An R package that gives the probability of Player 1 or Player 2 winning a tennis match based on the amount of aces each player scores. Log odds are first calculated with a general linear model based on the difference in each player's aces, then converted to probability and returned to the user.   
 License: GPL-3
 Encoding: UTF-8
